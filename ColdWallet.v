@@ -1,4 +1,4 @@
-module ColdWallet #(parameter CLKS_PER_BIT)(clk_i,btesq_i,btdir_i,btrst_i,led_o,/*,out*/);
+module ColdWallet #(parameter CLKS_PER_BIT = 87)(clk_i,btesq_i,btdir_i,btrst_i,led_o,/*,out*/);
 
 input wire btesq_i, btdir_i,btrst_i,clk_i;
 output wire led_o;
