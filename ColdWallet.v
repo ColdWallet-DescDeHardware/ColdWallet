@@ -5,6 +5,7 @@ output wire led_o;
 reg [255:0] key_w;
 
 wire wenable_w;
+wire w_Tx_Done;
 wire [15:0] fpin_w, pinrom_w;
 wire [255:0] key_w;
 wire [255:0] receiver_w;
@@ -50,7 +51,7 @@ begin
 			.i_Tx_Byte(key_w[i*8+:8]),
 			.o_Tx_Active(),
 			.o_Tx_Serial(),
-			.o_Tx_Done()
+			.o_Tx_Done(w_Tx_Done)
 		);
 	end
 end
